@@ -1,23 +1,24 @@
 class Numbers:
-    def __int__(self):
-        self.isFlag = True
+    def __init__(self, numbers=None):
+        if numbers is not None:
+            self.number_list = list(map(int, numbers))
+        self.summa = 0
+        self.average = 0
 
-    def __call__(self, numbers):
-        self.number_list = list(map(int, numbers))
-        for x in self.number_list:
-            if x % 2 == 0:
-                if x > 0:
-                    self.isFlag = True
-                else:
-                    self.isFlag = False
-            else:
-                self.isFlag = False
-        if self.isFlag:
-            return (print(x, 'Число четное и положительное.'))
-        else:
-            return (print(x, 'Число не подходит'))
+    def inspect(self):
+        try:
+            for x in self.number_list:
+                self.summa += x
+            self.average = self.summa / 12
+            return (print(self.average))
+        except:
+            print('Something went wrong.')
+
+    def __del__(self):
+        self.number_list = None
+        print('Прощай мир')
 
 
-numbers = input('Введите числа через пробел: ').split()
-object = Numbers()
-object(numbers)
+numbers = input('Введите зарплату за каждый месяц через пробел: ').split()
+object = Numbers(numbers)
+object.inspect()
