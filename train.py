@@ -10,7 +10,7 @@ class Numbers:
             for x in self.number_list:
                 self.summa += x
             self.average = self.summa / 12
-            return (print(self.average))
+            return (print('Average salary per year', self.average))
         except:
             print('Something went wrong.')
 
