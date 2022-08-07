@@ -22,3 +22,28 @@ class Numbers:
 numbers = input('Введите зарплату за каждый месяц через пробел: ').split()
 object = Numbers(numbers)
 object.inspect()
+
+6
+мальчиков
+и
+8
+девочек
+
+1
+из
+6
+2
+из
+6
+3
+из
+6
+4
+из
+6
+5
+из
+6
+6
+из
+6
