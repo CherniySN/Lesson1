@@ -11,7 +11,7 @@ class NaidemChislo:
 
     def naidem_chislo(self):
         if (int(self.chislo[0]) * int(self.chislo[1]) * 3) == int(self.chislo):
-            print('Эт замечательное число.')
+            print('Это замечательное число.')
 
 
 numbers = NaidemChislo(15)
